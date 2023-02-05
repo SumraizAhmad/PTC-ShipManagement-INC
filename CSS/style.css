@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../Images/BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------ Grid container CSS ------------------ */
+.container {
+  max-width: 1980px;
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: 385px 413px 214px;
+  grid-template-areas:
+    "header header one two three"
+    "form form one two three"
+    "footer footer footer footer footer";
+  gap: 1rem;
+}
+.frame {
+  text-align: center;
+  font-size: 30px;
+}
+
+.frame1 {
+  grid-area: header;
+}
+.frame2 {
+  grid-area: form;
+}
+.frame3 {
+  grid-area: one;
+  height: 791px;
+  display: flex;
+  align-items: flex-end;
+}
+.frame4 {
+  grid-area: two;
+  height: 791px;
+  display: flex;
+  align-items: flex-end;
+}
+.frame5 {
+  grid-area: three;
+  margin-right: 1rem;
+  height: 791px;
+  display: flex;
+  align-items: flex-end;
+}
+.frame6 {
+  grid-area: footer;
+}
+/* ------------------ Grid container CSS ------------------ */
+
+/* ------------------------ frame 1 CSS ----------------------*/
+.logo_box {
+  display: flex;
+}
+.heading {
+  margin: 3rem;
+}
+.logo {
+  height: auto;
+}
+/* ------------------------ frame 1 CSS ------------------ */
+
+/*------------------------- frame 2 CSS ------------------ */
+
+/* for client's made form  */
+.form {
+  margin: 2.75rem 7rem;
+  width: 500px;
+  height: 285px;
+  background-color: rgb(255, 255, 0);
+}
+/*------------------------- frame 2 CSS ------------------- */
+
+/* ------------------ frame 3, frame 4, frame 5 CSS ------------------  */
+.card {
+  width: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+}
+.card_box1 {
+  height: 260px;
+}
+.header_desc {
+  color: white;
+  font-style: italic;
+  font-family: sans-serif;
+  text-align: left;
+  margin: 1rem 0px;
+}
+.header_para_box {
+  width: 75%;
+}
+.header_para {
+  font-size: 21px;
+  color: white;
+  text-align: left;
+  line-height: 1.2;
+  font-family: system-ui;
+}
+.card_box2 {
+  height: 260px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card_image {
+  width: 100%;
+  height: 100%;
+}
+.box_icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+/* ------------------ frame 3, frame 4, frame 5  CSS ------------------  */
+
+/* ------------------footer CSS ------------------ */
+.footer_box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+.footer_image {
+  width: 15%;
+}
+.footer_text {
+  width: auto;
+  margin-left: 1rem;
+}
+.footer_text > p {
+  color: white;
+  text-align: left;
+}
+.footer_text > p > a {
+  text-decoration: none;
+  color: white;
+}
+/* ------------------footer CSS ------------------ */
+
+/*----- media queries for Tab responsive layout -- */
+
+@media screen and (max-width: 1919px) {
+  .form {
+    margin: 1rem 1rem;
+    width: 500px;
+    height: 285px;
+    background-color: rgb(255, 255, 0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header header"
+      "one two"
+      "three form"
+      "footer footer";
+    gap: 1rem;
+    padding: 3rem;
+    box-sizing: border-box;
+  }
+  .frame {
+    text-align: center;
+    font-size: 20px;
+  }
+  .frame1 {
+    grid-area: header;
+  }
+  .frame2 {
+    grid-area: form;
+  }
+  .frame3 {
+    grid-area: one;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .frame4 {
+    grid-area: two;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .frame5 {
+    grid-area: three;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .frame6 {
+    grid-area: footer;
+  }
+  .form {
+    margin: 0rem 0rem;
+    width: 325px;
+    height: 400px;
+    background-color: rgb(255, 255, 0);
+  }
+  .card {
+    width: 325px;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 5px 15px;
+  }
+  .card_box1 {
+    height: 240px;
+  }
+  .card_box2 {
+    height: 240px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #ff000080;
+  }
+}
+/* media queries for Tab responsive layout  */
+
+
+/* media queries for Mobile responsive layout  */
+@media screen and (max-width: 426px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "one"
+      "two"
+      "three"
+      "form"
+      "footer";
+    gap: 1rem;
+    padding: 3rem;
+  }
+  .frame {
+    text-align: center;
+    font-size: 12px;
+  }
+  .frame5 {
+    margin-right: 0;
+  }
+  .heading {
+    margin: 0rem;
+  }
+  .logo {
+    width: 150px;
+    height: auto;
+  }
+  .header_desc {
+    margin: 0.5rem 0;
+  }
+  .header_para_box {
+    width: 100%;
+  }
+  .header_para {
+    font-size: 14px;
+  }
+  .card {
+    width: 100%;
+  }
+  .card_box1 {
+    height: 200px;
+  }
+  .card_box2 {
+    height: 200px;
+  }
+  .box_icon {
+    width: 50px;
+    height: 50px;
+  }
+  .form {
+    width: 100%;
+    height: 300px;
+  }
+  .footer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+  }
+  .footer_image {
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+  .footer_text > p {
+    font-size: 11px;
+    color: white;
+    text-align: left;
+  }
+}
+/* media queries for Mobile responsive layout  */
