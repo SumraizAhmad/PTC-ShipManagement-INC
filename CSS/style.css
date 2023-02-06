@@ -11,7 +11,7 @@ body {
 
 /* ------------------ Grid container CSS ------------------ */
 .container {
-  max-width: 1980px;
+  max-width: 1920px;
   padding: 1rem;
   display: grid;
   grid-template-rows: 385px 413px 214px;
@@ -34,20 +34,17 @@ body {
 }
 .frame3 {
   grid-area: one;
-  height: 791px;
-  display: flex;
-  align-items: flex-end;
 }
 .frame4 {
   grid-area: two;
-  height: 791px;
-  display: flex;
-  align-items: flex-end;
 }
 .frame5 {
   grid-area: three;
   margin-right: 1rem;
-  height: 791px;
+}
+.box_frame {
+  /* height: 791px; */
+
   display: flex;
   align-items: flex-end;
 }
@@ -64,6 +61,7 @@ body {
   margin: 3rem;
 }
 .logo {
+  /* width: 200px; */
   height: auto;
 }
 /* ------------------------ frame 1 CSS ------------------ */
@@ -139,9 +137,11 @@ body {
 }
 .footer_text {
   width: auto;
+  /* height: 45px; */
   margin-left: 1rem;
 }
 .footer_text > p {
+  /* font-size: 18px; */
   color: white;
   text-align: left;
 }
@@ -153,16 +153,211 @@ body {
 
 /*----- media queries for Tab responsive layout -- */
 
-@media screen and (max-width: 1919px) {
+@media screen and (max-width: 1925px) {
   .form {
-    margin: 1rem 1rem;
+    margin: 2.5rem 5rem;
     width: 500px;
     height: 285px;
     background-color: rgb(255, 255, 0);
   }
 }
+@media screen and (max-width: 1560px) {
+  body {
+    background-image: url("../Images/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+  }
+  .container {
+    max-width: 1920px;
+    /* height: 110vh; */
+    padding: 1rem;
+    display: grid;
+    /* grid-template-rows: 200px 200px 100px; */
+    grid-template-rows: 227px 240px auto;
+    grid-template-areas:
+      "header header one two three"
+      "form form one two three"
+      "footer footer footer footer footer";
+    gap: 1rem;
+  }
+  .form {
+    margin: 2rem 5rem;
+    width: 389px;
+    /* width: 50px; */
+    height: 180px;
+    /* height: 50px; */
+    background-color: rgb(255, 255, 0);
+  }
+  .frame {
+    text-align: center;
+    font-size: 18px;
+  }
+  .heading {
+    margin: 2rem;
+  }
+  .logo {
+    width: 40%;
+    height: auto;
+  }
+  .box_frame {
+    height: 512px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card {
+    width: 293px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgb(0 0 0 / 70%) 0px 5px 15px;
+  }
+  .card_box1 {
+    height: 185px;
+  }
+  .card_box2 {
+    height: 185px;
+  }
+  .header_para_box {
+    width: 90%;
+  }
+  .header_para {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  body {
+    background-image: url("../Images/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    /* background-size: cover; */
+  }
+  .container {
+    max-width: 1920px;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas:
+      "header header one two three"
+      "form form one two three"
+      "footer footer footer footer footer";
+    gap: 1rem;
+  }
+  .form {
+    margin: 1.5rem 2rem;
+    width: 380px;
+    height: 180px;
+    background-color: rgb(255, 255, 0);
+  }
+  .frame {
+    text-align: center;
+    font-size: 18px;
+  }
+  .heading {
+    margin: 2rem;
+  }
+  .logo {
+    width: 40%;
+    height: auto;
+  }
+  .box_frame {
+    height: 452px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card {
+    width: 256px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgb(0 0 0 / 70%) 0px 5px 15px;
+  }
+  .card_box1 {
+    height: 160px;
+  }
+  .card_box2 {
+    height: 160px;
+  }
+  .header_para_box {
+    width: 90%;
+  }
+  .header_para {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    background-image: url("../Images/BG.jpg");
+    background-repeat: no-repeat;
+    /* background-size: 100vw 100vh; */
+    background-size: cover;
+  }
+  .container {
+    max-width: 1920px;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 200px 200px 100px;
+    grid-template-areas:
+      "header header one two three"
+      "form form one two three"
+      "footer footer footer footer footer";
+    gap: 1rem;
+  }
+  .form {
+    margin: 1rem 2rem;
+    width: 310px;
+    height: 160px;
+    background-color: rgb(255, 255, 0);
+  }
+  .frame {
+    text-align: center;
+    font-size: 18px;
+  }
+  .heading {
+    margin: 2rem;
+  }
+  .logo {
+    width: 40%;
+    height: auto;
+  }
+  .box_frame {
+    height: 414px;
+    display: flex;
+    align-items: flex-end;
+  }
+  .card {
+    width: 188px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: rgb(0 0 0 / 70%) 0px 5px 15px;
+  }
+  .card_box1 {
+    height: 140px;
+  }
+  .card_box2 {
+    height: 140px;
+  }
+  .header_para_box {
+    width: 90%;
+  }
+  .header_desc {
 
+    margin: 0.5rem 0px;
+}
+  .header_para {
+    font-size: 13px;
+  }
+  .footer_box {
+   
+    margin-top: 1rem;
+}
+}
 @media screen and (max-width: 768px) {
+  body {
+    background-image: url("../Images/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .container {
     width: 100%;
     padding: 1rem;
@@ -190,6 +385,7 @@ body {
   }
   .frame3 {
     grid-area: one;
+
     height: auto;
     display: flex;
     align-items: flex-end;
@@ -234,14 +430,20 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    /* margin-top: 1rem 0rem; */
     border-top: 1px solid #ff000080;
   }
 }
-/* media queries for Tab responsive layout  */
 
+/* media queries for Tab responsive layout  */
 
 /* media queries for Mobile responsive layout  */
 @media screen and (max-width: 426px) {
+  body {
+    background-image: url("../Images/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   .container {
     width: 100%;
     padding: 1rem;
@@ -261,6 +463,7 @@ body {
   .frame {
     text-align: center;
     font-size: 12px;
+    /* background-color: brown; */
   }
   .frame5 {
     margin-right: 0;
@@ -298,6 +501,7 @@ body {
     width: 100%;
     height: 300px;
   }
+
   .footer_box {
     display: flex;
     justify-content: center;
